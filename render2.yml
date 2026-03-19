@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: electricity-theft-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.0"
+      - key: DATABASE_URL # This was the missing line!
+        fromDatabase:
+          name: electricity-db
+          property: connectionString
+
+databases:
+  - name: electricity-db
+    plan: free
