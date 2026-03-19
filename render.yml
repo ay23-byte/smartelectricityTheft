@@ -1,0 +1,20 @@
+services:
+  # 1. The Web Service (FastAPI)
+  - type: web
+    name: electricity-theft-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      # If using a database, Render will automatically provide the DATABASE_URL
+      - fromDatabase:
+          name: electricity-db
+          property: connectionString
+
+# 2. The Database (PostgreSQL) - Optional
+databases:
+  - name: electricity-db
+    plan: free # Use the free tier for testing
+    
