@@ -962,6 +962,23 @@ import os
 from sklearn.ensemble import IsolationForest
 from flask import Flask, request, redirect, session, jsonify
 
+
+## accessing the stuff
+
+import os
+from dotenv import load_dotenv
+
+# Load variables from .env file
+load_dotenv()
+
+# Access them using os
+TWILIO_SID = os.getenv("TWILIO_SID")
+TWILIO_AUTH = os.getenv("TWILIO_AUTH")
+TWILIO_FROM = os.getenv("TWILIO_FROM")
+TWILIO_TO = os.getenv("TWILIO_TO")
+
+
+
 # ---------------- DATABASE ----------------
 conn = sqlite3.connect('theft.db', check_same_thread=False)
 c = conn.cursor()
