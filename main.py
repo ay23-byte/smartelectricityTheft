@@ -1010,10 +1010,7 @@ tracked_cities = [
 ]
 
 # ---------------- TWILIO ----------------
-TWILIO_SID = "AC5f108cdadf17b4a6548540fe7553e7d4"
-TWILIO_AUTH = "f72240ac7c5aa3b2d397d66103ea75ca"
-TWILIO_FROM = "+1 838 332 3441"
-TWILIO_TO = "+919838502403"
+
 
 
 try:
