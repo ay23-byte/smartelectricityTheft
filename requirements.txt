@@ -1,7 +1,8 @@
-fastapi
-uvicorn
+flask
 gunicorn
-pandas
-numpy
-scikit-learn
 requests
+numpy
+pandas
+scikit-learn
+twilio
+python-dotenv
