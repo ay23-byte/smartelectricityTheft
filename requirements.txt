@@ -1,8 +1,8 @@
 flask
 gunicorn
 numpy
-sqlite3
-requests
+pandas
 scikit-learn
+requests
 twilio
 python-dotenv
